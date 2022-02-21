@@ -92,6 +92,8 @@ DATABASES = {
     }
 }
 
+EXCEL365_CLIENT_ID = os.environ.get('EXCEL365_CLIENT_ID', '74d8c436-742a-4c97-86af-d6a9663b117b')
+EXCEL365_CLIENT_SECRET = os.environ.get('EXCEL365_CLIENT_SECRET', 'xp17Q~Rb3Rvz_MJg3rZ0QoLWvelbjQ0OgRsMC')
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

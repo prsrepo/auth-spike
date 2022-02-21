@@ -5,6 +5,7 @@ import requests
 from requests_oauthlib.oauth2_session import OAuth2Session
 
 from app.models import Connection
+from msgraphoauth import settings
 
 
 class Oauth2Handler:
@@ -12,8 +13,8 @@ class Oauth2Handler:
         self.AUTHORITY_URL = 'https://login.microsoftonline.com/common'
         self.AUTH_ENDPOINT = '/oauth2/v2.0/authorize'
         self.TOKEN_ENDPOINT = '/oauth2/v2.0/token'
-        self.CLIENT_ID = '74d8c436-742a-4c97-86af-d6a9663b117b'
-        self.CLIENT_SECRET = 'xp17Q~Rb3Rvz_MJg3rZ0QoLWvelbjQ0OgRsMC'
+        self.CLIENT_ID = settings.EXCEL365_CLIENT_ID
+        self.CLIENT_SECRET = settings.EXCEL365_CLIENT_SECRET
         self.SCOPES = ['User.Read', 'Files.Read.All', 'offline_access']
 
         self.REDIRECT_URI = 'http://localhost:8080/app/oauth2/callback'
